@@ -1,0 +1,105 @@
+:root {
+  --lightblue: rgb(208, 255, 239);
+  --green: rgb(18, 119, 86);
+  --red: rgb(173, 54, 62);
+  --yellow: rgb(212, 209, 27);
+  --blue: rgb(30, 49, 216);
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+  background-color: var(--lightblue);
+  font-family: sans-serif;
+  color: black;
+}
+
+.main-game {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.genius {
+  display: grid;
+  grid-template-areas: 'green-area red-area' 'yellow-area blue-area';
+  grid-gap: 10px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 100%;
+  width: 50vh;
+  min-width: 300px;
+  height: 50vh;
+  min-height: 300px;
+}
+
+.green {
+  grid-area: green-area;
+  background-color: var(--green);
+  border-top-left-radius: 100%;
+}
+
+.red {
+  grid-area: red-area;
+  background-color: var(--red);
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: yellow-area;
+  background-color: var(--yellow);
+  border-bottom-left-radius: 100%;
+}
+
+.blue {
+  grid-area: blue-area;
+  background-color: var(--blue);
+  border-bottom-right-radius: 100%;
+}
+
+.green,
+.yellow,
+.red,
+.blue {
+  cursor: pointer;
+}
+
+.selected {
+  opacity: 0.5;
+}
+
+.menu {
+  margin-top: 40px;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  color: white;
+  border: 1px white solid;
+  padding: 15px 32px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  transition: .1s ease all;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px black solid;
+}
+
+.score-text {
+  border: 1px var(--lightblue) solid;
+  padding: 15px 32px;
+  font-size: 20px;
+  font-weight: 700;
+}
